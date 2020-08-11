@@ -9,15 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/second")
-public class SecondServlet extends HttpServlet{
+@WebServlet("/third")
+public class ThirdServlet extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("Second Servlet!!");
+		resp.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = resp.getWriter();
-		out.print("<html><head><title>Test</title></head>");
-		out.print("<body><h1>have a nice day!!</h1></body>");
-		out.print("</html>");
+		out.print("<h1>좋은 하루!<h1>");
 		out.close();
 	}
 }
