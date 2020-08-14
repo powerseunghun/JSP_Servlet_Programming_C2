@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form Test</title>
+</head>
+<body>
+	<h3>Member Information</h3>
+	<form action="queryTest2" method="POST">
+		ID : <input type="text" name="id"/><br/>
+		PW : <input type="password" name="pwd"/></br>
+		Name : <input type="text" name="name"/><br/>
+		Hobby : 
+			<input type="checkbox" name="hobby" value="climbing"/>Climbing
+			<input type="checkbox" name="hobby" value="sports"/>Sports
+			<input type="checkbox" name="hobby" value="reading"/>Reading
+			<input type="checkbox" name="hobby" value="traveling"/>Traveling<br/>
+		Gender :
+			<input type="radio" name="gender" value="male"/>Male
+			<input type="radio" name="gender" value="female"/>Female<br/>	
+		Religion : 
+			<select name="religion">
+				<option value="Christianity"> Christianity
+				<option value="Buddhism"> Buddhism
+				<option value="Catholicism"> Catholicism
+				<option value="Atheism"> Atheism
+			</select><br/>
+		Introduce : <br/>
+			<textarea cols="30" rows="10" name="introduction"></textarea> <br/>
+		
+		<input type="submit" value="submit"/>
+		<input type="reset" value="clear"/>
+	</form>
+</body>
+</html>
