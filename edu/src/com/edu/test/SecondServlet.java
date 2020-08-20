@@ -11,12 +11,22 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/second")
 public class SecondServlet extends HttpServlet{
+//	@Override
+//	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//		System.out.println("Second Servlet!!");
+//		PrintWriter out = resp.getWriter();
+//		out.print("<html><head><title>Test</title></head>");
+//		out.print("<body><h1>have a nice day!!</h1></body>");
+//		out.print("</html>");
+//		out.close();
+//	}
+	
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("Second Servlet!!");
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("SecondServlet!!");
 		PrintWriter out = resp.getWriter();
 		out.print("<html><head><title>Test</title></head>");
-		out.print("<body><h1>have a nice day!!</h1></body>");
+		out.print("<body><h1>have a nice dayy!!</h1></body>");
 		out.print("</html>");
 		out.close();
 	}
