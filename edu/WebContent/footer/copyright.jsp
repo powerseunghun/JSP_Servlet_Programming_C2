@@ -1,0 +1,1 @@
+All Contents Copyright(c) 0000 0000 0000 Co.,LTD
