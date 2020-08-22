@@ -8,28 +8,28 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
 
-public class FlowFilterTwo implements Filter{
-	String charset;
-	
+@WebFilter(filterName = "timer", urlPatterns = "/third")
+public class FlowFilterThree implements Filter{
+
 	@Override
 	public void destroy() {
-		System.out.println("destroy() method call...two");
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		request.setCharacterEncoding(charset);
-		System.out.println("before doFilter() method call...two");
+		long startTime = System.currentTimeMillis();
 		chain.doFilter(request, response);
-		System.out.println("after doFilter() method call...two");
+		long endTime = System.currentTimeMillis();
+		long executeTime = endTime - startTime;
+		System.out.println("수행 시간 : " + executeTime + "ms");
 	}
 
 	@Override
-	public void init(FilterConfig filterConfig) throws ServletException {
-		System.out.println("init() method call...two");
-		charset = filterConfig.getInitParameter("en");
-	}
-	
+	public void init(FilterConfig filterConfig) throws ServletException {}
+
 }
