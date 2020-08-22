@@ -25,9 +25,18 @@
     <filter-name>flow2</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping> -->
-  <listener>
-  	<listener-class>com.edu.test.TestRequestListener</listener-class>
+  <!-- <listener>
+  	<listener-class>com.edu.test.TestServletContextListener</listener-class>
   </listener>
+  <listener>
+  	<listener-class>com.edu.test.TestSessionListener</listener-class>
+  </listener>
+  <listener>
+  	<listener-class>com.edu.test.TestSessionAttributeListener</listener-class>
+  </listener>
+   <listener>
+  	<listener-class>com.edu.test.TestRequestListener</listener-class>
+  </listener> -->
   <servlet>
     <servlet-name>initParam</servlet-name>
     <servlet-class>com.edu.test.InitParamServlet</servlet-class>
