@@ -37,6 +37,16 @@
          UserDatabaseRealm to authenticate users
     -->
     <Resource auth="Container" description="User database that can be updated and saved" factory="org.apache.catalina.users.MemoryUserDatabaseFactory" name="UserDatabase" pathname="conf/tomcat-users.xml" type="org.apache.catalina.UserDatabase"/>
+    
+    <Resource driverClassName="oracle.jdbc.driver.OracleDriver"
+    		  url="jdbc:oracle:thin:@127.0.0.1:1521:xe"
+    		  username="scott"
+    		  password="tiger"
+    		  name="jdbc/myoracle"
+    		  type="javax.sql.DataSource"
+    		  maxActive="4"
+    		  maxIdle="2"
+    		  maxWait="5000" />
   </GlobalNamingResources>
 
   <!-- A "Service" is a collection of one or more "Connectors" that share
