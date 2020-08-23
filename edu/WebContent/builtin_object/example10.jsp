@@ -37,6 +37,10 @@
 				out.print("Not Login status");
 			}%>
 	<% } %>
+	<%
+		RequestDispatcher rd = request.getRequestDispatcher("logInOut.jsp");
+		rd.forward(request, response);
+	%>
 	
 </body>
 </html>
