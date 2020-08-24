@@ -74,6 +74,14 @@
   	<res-auth>Container</res-auth>
   </resource-ref>
   
+  <jsp-config>
+  	<taglib>
+  		<taglib-uri>http://myTags.com</taglib-uri>
+  		<taglib-location>/WEB-INF/myTag.tld</taglib-location>
+  	</taglib>
+  </jsp-config>
+  
+  
   <error-page>
   	<error-code>405</error-code>
   	<location>/errorHandle</location>
