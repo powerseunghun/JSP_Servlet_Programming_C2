@@ -13,6 +13,7 @@
 	MemberService service = new MemberService();
 	service.memberInsert(member);
 	
-	RequestDispatcher rd = request.getRequestDispatcher("memberOutput.jsp");
-	rd.forward(request, response);
+	response.sendRedirect("memberOutput.jsp");
+	/* RequestDispatcher rd = request.getRequestDispatcher("memberOutput.jsp");
+	rd.forward(request, response); */
 %>
